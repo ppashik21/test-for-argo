@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: test-deployment
+   labels:
+     name: test-deployment
+spec:
+   replicas: 2
+   selector:
+     matchLabels:
+       app: test
+   template:
+     metadata:
+       labels:
+         app: test
+     spec:
+       containers:
+       - name: test-argo
+         image: pashik/test2:latest
+         imagePullPolicy: Always
+         ports:
+          - containerPort: 88
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-service
+  labels:
+    app: test
+spec:
+  type: ClusterIP
+  ports:
+    - port: 89
+      targetPort: 88
+      protocol: TCP
+  selector:
+    app: test
