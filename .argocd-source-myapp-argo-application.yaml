@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: image.name
+    value: docker.io/pashik/test2
+    forcestring: true
+  - name: image.tag
+    value: "2"
+    forcestring: true
