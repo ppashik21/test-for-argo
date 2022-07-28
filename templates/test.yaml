@@ -16,7 +16,7 @@ spec:
      spec:
        containers:
        - name: test-argo
-         image: pashik/test2:latest
+         image: pashik/test2
          imagePullPolicy: Always
          ports:
           - containerPort: 80
