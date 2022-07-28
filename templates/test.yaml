@@ -5,14 +5,14 @@ metadata:
    labels:
      name: test-deployment
    annotations:
-    argocd-image-updater.argoproj.io/image-list: myimage=pashik/test2:latest
-    argocd-image-updater.argoproj.io/myimage.update-strategy: digest
-    #argocd-image-updater.argoproj.io/write-back-method: <argocd>
-    # argocd or git
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/github-token
-    # add git credentials secret named git-creds
-    #argocd-image-updater.argoproj.io/git-branch: HEAD
-    # Specifying a branch to commit to
+     argocd-image-updater.argoproj.io/image-list: myimage=pashik/test2:latest
+     argocd-image-updater.argoproj.io/myimage.update-strategy: digest
+     #argocd-image-updater.argoproj.io/write-back-method: <argocd>
+     # argocd or git
+     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/github-token
+     # add git credentials secret named git-creds
+     #argocd-image-updater.argoproj.io/git-branch: HEAD
+     # Specifying a branch to commit to
 spec:
    replicas: 2
    selector:
