@@ -4,5 +4,5 @@ helm:
     value: docker.io/pashik/test2
     forcestring: true
   - name: image.tag
-    value: latest@sha256:9696d48fd24d28e79f638accf564f09cbfa6fe91ad9b999d3fed68437be2e7d3
+    value: latest@sha256:2d71914085ec723d5f9627ae16d2c664af8a4ba0bb86a6cfb9a5a80e11a9f1c3
     forcestring: true
